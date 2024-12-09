@@ -1,0 +1,9 @@
+#f1     {
+    background-color: rgb(0, 100, 100);
+}
+
+#text1{
+    position: relative;
+    color-interpolation-filters: auto;
+    left: 235px;
+}

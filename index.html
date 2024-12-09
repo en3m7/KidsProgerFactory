@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-школа программирования KidsProgerFactory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .header, .footer {
+            background-color: #007bff; /* Яркий синий */
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #ff5722; /* Яркий красный */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e64a19; /* Темнее красный */
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff; /* Яркий синий */
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #ff5722; /* Яркий красный */
+        }
+
+        p, li {
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0056b3; /* Темнее синий */
+            color: white;
+        }
+
+        .program, .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e3f2fd; /* Светло-синий */
+            border-radius: 8px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, button {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        button {
+            background-color: #007bff; /* Яркий синий */
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Темнее синий */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Добро пожаловать в нашу онлайн-школу программирования!</h1>
+        <p>Обучаем детей программированию через увлекательные курсы.</p>
+        <a href="#trial-lesson" class="cta-button">Записаться на пробный урок</a>
+    </header>
+
+    <div class="container">
+        <section id="advantages" class="section">
+            <h2>Преимущества обучения</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-user-graduate fa-3x mb-3" style="color: #007bff;"></i>
+                            <h3 class="card-title">Индивидуальный подход</h3>
+                            <p class="card-text">Каждый ученик получает внимание и поддержку, необходимые для успешного обучения.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-chalkboard-teacher fa-3x mb-3" style="color: #007bff;"></i>
+                            <h3 class="card-title">Опытные преподаватели</h3>
+                            <p class="card-text">Наши преподаватели имеют опыт работы и знают, как заинтересовать детей.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code fa-3x mb-3" style="color: #007bff;"></i>
+                            <h3 class="card-title">Интерактивные занятия</h3>
+                            <p class="card-text">Занятия проходят в увлекательной форме, что делает обучение интересным.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section">
+            <h2>Наши программы</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="program card">
+                        <img src="D:\Documents\Шарага\картинки08\pic1.jpg" class="card-img-top" alt="Курс по Scratch">
+                        <div class="card-body">
+                            <h3 class="card-title">Курс по Scratch</h3>
+                            <p>Возраст: 6-10 лет</p>
+                            <p>Описание: Научитесь создавать игры и анимации с помощью Scratch.</p>
+                            <p>Стоимость: 5000 руб.</p>
+                            <p>График: Пн, Ср, Пт - 16:00-17:30</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="program card">
+                        <img src="D:\Documents\Шарага\картинки08\pic2.png" class="card-img-top" alt="Курс по Python">
+                        <div class="card-body">
+                            <h3 class="card-title">Курс по Python</h3>
+                            <p>Возраст: 10-14 лет</p>
+                            <p>Описание: Изучите основы программирования на Python.</p>
+                            <p>Стоимость: 6000 руб.</p>
+                            <p>График: Вт, Чт - 17:00-18:30</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="program card">
+                        <img src="D:\Documents\Шарага\картинки08\pic3.png" class="card-img-top" alt="Курс по JavaScript">
+                        <div class="card-body">
+                            <h3 class="card-title">Курс по JavaScript</h3>
+                            <p>Возраст: 12-16 лет</p>
+                            <p>Описание: Научитесь создавать интерактивные веб-страницы с помощью JavaScript.</p>
+                            <p>Стоимость: 7000 руб.</p>
+                            <p>График: Пн, Чт - 18:00-19:30</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section">
+            <h2>Отзывы</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>Мой сын в восторге от занятий!</p>
+                        <footer class="blockquote-footer">Анна, мама 8-летнего ученика</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>Отличная школа! Дочка научилась программировать за короткое время.</p>
+                        <footer class="blockquote-footer">Сергей, папа 12-летней ученицы</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>Занятия очень интересные и познавательные! Прийдем еще и дадим вам денег!</p>
+                        <footer class="blockquote-footer">Мария, мама 10-летнего ученика</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="section">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: info@school.com</p>
+            <p>Адрес: г. Москва, ул. Константина Хабенского, д. 51</p>
+            <form action="submit_form.php" method="POST">
+                <label for="callback">Оставьте заявку на обратный звонок:</label>
+                <input type="text" id="callback" name="callback" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <section id="trial-lesson" class="section">
+            <h2>Запись на пробный урок</h2>
+            <form action="register_trial.php" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="age">Возраст ребенка:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <button type="submit">Записаться</button>
+            </form>
+        </section>
+
+        <section id="blog" class="section">
+            <h2>Блог</h2>
+            <article class="post">
+                <h3>Почему программирование полезно для детей?</h3>
+                <p>Программирование развивает логическое мышление и креативность. В современном мире навыки программирования становятся все более важными для успешной карьеры.</p>
+            </article>
+            <article class="post">
+                <h3>Как выбрать курс программирования для ребенка?</h3>
+                <p>Выбор курса зависит от возраста ребенка и его интересов. Важно, чтобы курс был интересным и доступным для понимания.</p>
+            </article>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Контакты: info@school.com | Телефон: +7 (123) 456-78-90</p>
+        <p>&copy; 2024 Онлайн-школа программирования KidsProgerFactory</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
