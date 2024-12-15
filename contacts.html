@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Онлайн-школа программирования для детей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000; /* Черный фон */
+            color: #ffffff; /* Белый текст */
+            font-size: 1.2rem; /* Увеличенный шрифт */
+        }
+        .header, .footer {
+            background-color: #6f42c1; /* Фиолетовый цвет */
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .content {
+            background-color: #343a40; /* Темно-серый фон для контента */
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #ffcc00; /* Яркий желтый цвет для заголовков */
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="header">
+        <h1>Контакты</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Главная</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Курсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Блог</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="content">
+            <h2>Свяжитесь с нами</h2>
+            <p>Если у вас есть вопросы или предложения, пожалуйста, заполните форму ниже, и мы свяжемся с вами в ближайшее время.</p>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Электронная почта</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Отправить</button>
+            </form>
+            <div id="response" class="mt-3"></div>
+        </div>
+
+        <div class="content">
+            <h2>Наши контакты</h2>
+            <p><strong>Электронная почта:</strong> info@school.com</p>
+            <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+            <p><strong>Адрес:</strong> г. Москва, ул. Программирования, д. 1</p>
+            <p><strong>Часы работы:</strong> Пн-Пт: 9:00 - 18:00</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Онлайн-школа программирования для детей</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Замените YOUR_USER_ID на ваш User ID из EmailJS
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                name: name,
+                email: email,
+                message: message
+            })
+            .then(function(response) {
+                document.getElementById('response').innerHTML = "<p class='text-success'>Ваше сообщение успешно отправлено!</p>";
+                document.getElementById('contact-form').reset(); // Сброс формы
+            }, function(error) {
+                document.getElementById('response').innerHTML = "<p class='text-danger'>Ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.</p>";
+            });
+        });
+    </script>
+</body>
+</html>

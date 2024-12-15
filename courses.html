@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - Онлайн-школа программирования для детей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000; /* Черный фон */
+            color: #ffffff; /* Белый текст */
+            font-size: 1.2rem; /* Увеличенный шрифт */
+        }
+        .header, .footer {
+            background-color: #6f42c1; /* Фиолетовый цвет */
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .content {
+            background-color: #343a40; /* Темно-серый фон для контента */
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #ffcc00; /* Яркий желтый цвет для заголовков */
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="header">
+        <h1>Наши курсы</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Главная</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Курсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Блог</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="content">
+            <h2>Курс "Основы программирования"</h2>
+            <p>Этот курс предназначен для детей от 10 до 14 лет, которые хотят узнать основы программирования. Мы используем язык Scratch, который позволяет создавать игры и анимации с помощью визуального программирования.</p>
+            <p><strong>Что вы узнаете:</strong></p>
+            <ul>
+                <li>Основы логики программирования</li>
+                <li>Создание простых игр</li>
+                <li>Работа с графикой и анимацией</li>
+                <li>Основы работы в команде</li>
+            </ul>
+            <p><strong>Длительность:</strong> 8 недель, 2 занятия в неделю по 1.5 часа.</p>
+            <p><strong>Стоимость:</strong> 8000 рублей.</p>
+        </div>
+
+        <div class="content">
+            <h2>Курс "Python для начинающих"</h2>
+            <p>Этот курс подходит для детей от 12 лет и старше. Python — это один из самых популярных языков программирования, который используется в различных областях, от веб-разработки до анализа данных.</p>
+            <p><strong>Что вы узнаете:</strong></p>
+            <ul>
+                <li>Синтаксис и основы языка Python</li>
+                <li>Работа с переменными и типами данных</li>
+                <li>Создание простых программ и игр</li>
+                <li>Основы работы с библиотеками</li>
+            </ul>
+            <p><strong>Длительность:</strong> 10 недель, 2 занятия в неделю по 2 часа.</p>
+            <p><strong>Стоимость:</strong> 10000 рублей.</p>
+        </div>
+
+        <div class="content">
+            <h2>Курс "Веб-разработка для детей"</h2>
+            <p>Этот курс предназначен для детей от 13 лет, которые хотят научиться создавать свои собственные веб-сайты. Мы изучим HTML, CSS и основы JavaScript.</p>
+            <p><strong>Что вы узнаете:</strong></p>
+            <ul>
+                <li>Основы HTML и CSS</li>
+                <li>Создание адаптивных веб-страниц</li>
+                <li>Основы JavaScript для интерактивности</li>
+                <li>Работа с графикой и мультимедиа</li>
+            </ul>
+            <p><strong>Длительность:</strong> 12 недель, 2 занятия в неделю по 2 часа.</p>
+            <p><strong>Стоимость:</strong> 12000 рублей.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Контакты: info@school.com | Телефон: +7 (123) 456-78-90</p>
+        <p>&copy; 2023 Онлайн-школа программирования для детей</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
